@@ -54,17 +54,20 @@ int main(){
             count++;
         }
 
-    printf("\nTerima kasih telah menggunakan kalkulator ini!\n");
+     printf("\nApakah ingin melakukan operasi lagi? (y/n): ");
+     scanf(" %c", &lanjut); // Spasi sebelum %c untuk mengabaikan newline
+    
     } while (lanjut == 'y' || lanjut == 'Y');
 
-    printf("\nApakah ingin melakukan operasi lagi? (y/n): ");
-    scanf(" %c", &lanjut); // Spasi sebelum %c untuk mengabaikan newline
+   
     
     // Looping untuk menampilkan hasil sebelumnya
     printf("\nRiwayat hasil perhitungan:\n");
     for (int i = 0; i < count; i++) {
     printf("Hasil ke-%d = %.2f\n", i + 1, riwayat[i]);
     }
+    
+    printf("\nTerima kasih telah menggunakan kalkulator ini!\n");
 
     return 0;
 }
